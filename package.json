@@ -7,17 +7,17 @@
     "gulp": "^3.9.1"
   },
   "config": {
-    "src": {
-      "sass": "src/sass/main.sass",
-      "html": "src/*.html",
-      "js": "src/js/main.js",
-      "fonts": "src/fonts/**/*.*",
+    "dev": {
+      "sass": "dev/sass/main.sass",
+      "html": "dev/*.html",
+      "js": "dev/js/main.js",
+      "fonts": "dev/fonts/**/*.*",
       "img": {
         "compress": [
-          "src/img/**/*.*",
-          "!src/img/noCompress/**/*.*"
+          "dev/img/**/*.*",
+          "!dev/img/noCompress/**/*.*"
         ],
-        "noCompress": "src/img/noCompress/**/*.*"
+        "noCompress": "dev/img/noCompress/**/*.*"
       }
     },
     "dist": {
@@ -28,8 +28,8 @@
       "img": "dist/img"
     },
     "libs": {
-      "js": "src/js/libs.js",
-      "css": "src/css/libs.css"
+      "js": "dev/js/libs.js",
+      "css": "dev/css/libs.css"
     }
   },
   "devDependencies": {

@@ -2,10 +2,10 @@ var gulp = require('gulp');
 var cnf = require('../package.json').config;
 
 gulp.task('fonts', function () {
-  gulp.src(cnf.src.fonts)  
+  gulp.src(cnf.dev.fonts)  
     .pipe(gulp.dest(cnf.dist.fonts));
 });
  
 gulp.task('fonts:watch', function () {
-  gulp.watch([cnf.src.fonts], ['fonts']);
+  gulp.watch([cnf.dev.fonts], ['fonts']);
 });

@@ -10,7 +10,7 @@ var uglify = require('gulp-uglify');
 var include       = require("gulp-include");
 
 gulp.task('libs', function () {
-  gulp.src(cnf.libs.css)
+  gulp.src(cnf.libs.css) //css
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(importCss())
     .pipe(cssnano())
@@ -22,7 +22,7 @@ gulp.task('libs', function () {
       extname: ".css"
     }))
     .pipe(gulp.dest(cnf.dist.css));
-  gulp.src(cnf.libs.js)
+  gulp.src(cnf.libs.js) //js
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(babel())
     .pipe(include({

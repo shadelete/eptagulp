@@ -7,9 +7,9 @@ var runSequence = require('run-sequence');
 
 
 gulp.task('img', function () {
-  gulp.src(cnf.src.img.noCompress)
+  gulp.src(cnf.dev.img.noCompress)
     .pipe(gulp.dest(cnf.dist.img));
-  gulp.src(cnf.src.img.compress)
+  gulp.src(cnf.dev.img.compress)
     .pipe(imagemin([
         imagemin.gifsicle({interlaced: true}),
         imagemin.jpegtran({progressive: true}),
@@ -25,5 +25,5 @@ gulp.task('img', function () {
 });
  
 gulp.task('img:watch', function () {
-  gulp.watch(['src/img/**/*.*'], ['img']);
+  gulp.watch(['dev/img/**/*.*'], ['img']);
 });

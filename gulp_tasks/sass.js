@@ -9,7 +9,7 @@ var cssnano = require('gulp-cssnano');
 var rename = require("gulp-rename");
 
 gulp.task('sass', function () {
-  return gulp.src(cnf.src.sass)
+  return gulp.src(cnf.dev.sass)
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
@@ -30,5 +30,5 @@ gulp.task('sass', function () {
 });
  
 gulp.task('sass:watch', function () {
-  gulp.watch('./src/sass/**/*.*', ['sass']);
+  gulp.watch('./dev/sass/**/*.*', ['sass']);
 });

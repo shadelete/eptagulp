@@ -6,7 +6,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var fileinclude = require('gulp-file-include');
 
 gulp.task('html', function () {
-  return gulp.src(cnf.src.html)
+  return gulp.src(cnf.dev.html)
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(fileinclude({
         prefix: '@@',
@@ -16,5 +16,5 @@ gulp.task('html', function () {
 });
  
 gulp.task('html:watch', function () {
-  gulp.watch(['src/**/*.html'], ['html']);
+  gulp.watch(['dev/**/*.html'], ['html']);
 });
