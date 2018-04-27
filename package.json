@@ -1,6 +1,6 @@
 {
-  "name": "gulp",
-  "version": "1.0.0",
+  "name": "frontend_gulp_boilerplate",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "dependencies": {
