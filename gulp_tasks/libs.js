@@ -30,6 +30,13 @@ gulp.task('libs', function () {
         hardFail: true
       }))
     .pipe(uglify())
+    .pipe(rename({
+      dirname: "",
+      basename: "libs",
+      prefix: "",
+      suffix: ".min",
+      extname: ".js"
+    }))
     .pipe(gulp.dest(cnf.prod.js))
 });
  

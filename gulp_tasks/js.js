@@ -6,6 +6,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var babel = require('gulp-babel');
 var include       = require("gulp-include");
 var uglify = require('gulp-uglify');
+var rename = require("gulp-rename");
 
 gulp.task('js', function () {
   gulp.src(cnf.dev.js)
@@ -17,6 +18,13 @@ gulp.task('js', function () {
         hardFail: true
       }))
     .pipe(uglify())
+    .pipe(rename({
+      dirname: "",
+      basename: "main",
+      prefix: "",
+      suffix: ".min",
+      extname: ".js"
+    }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(cnf.prod.js));
 });
