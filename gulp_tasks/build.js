@@ -4,7 +4,7 @@ var del = require('del');
 
 
 gulp.task('clean', function() {
-	return del(['dist/'])
+	return del(['prod/'])
 });
 
 gulp.task('build',['clean'], function() {
@@ -13,6 +13,7 @@ gulp.task('build',['clean'], function() {
   	'html',
   	'js',
   	'fonts',
+  	'img',
   	'libs'
    );
 });

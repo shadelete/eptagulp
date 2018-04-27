@@ -8,7 +8,7 @@ var include       = require("gulp-include");
 var uglify = require('gulp-uglify');
 
 gulp.task('js', function () {
-  return gulp.src(cnf.dev.js)
+  gulp.src(cnf.dev.js)
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(babel())
@@ -18,7 +18,7 @@ gulp.task('js', function () {
       }))
     .pipe(uglify())
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(cnf.dist.js));
+    .pipe(gulp.dest(cnf.prod.js));
 });
  
 gulp.task('js:watch', function () {

@@ -1,6 +1,6 @@
 {
   "name": "frontend_gulp_boilerplate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "dependencies": {
@@ -10,22 +10,16 @@
     "dev": {
       "sass": "dev/sass/main.sass",
       "html": "dev/*.html",
-      "js": "dev/js/main.js",
+      "js": "dev/js/common.js",
       "fonts": "dev/fonts/**/*.*",
-      "img": {
-        "compress": [
-          "dev/img/**/*.*",
-          "!dev/img/noCompress/**/*.*"
-        ],
-        "noCompress": "dev/img/noCompress/**/*.*"
-      }
+      "img": "dev/img/**/*.*"
     },
-    "dist": {
-      "css": "dist/css",
-      "html": "dist/",
-      "js": "dist/js/",
-      "fonts": "dist/fonts",
-      "img": "dist/img"
+    "prod": {
+      "css": "prod/css",
+      "html": "prod/",
+      "js": "prod/js/",
+      "fonts": "prod/fonts",
+      "img": "prod/img"
     },
     "libs": {
       "js": "dev/js/libs.js",
@@ -62,6 +56,11 @@
   "scripts": {
     "start": "gulp"
   },
-  "author": "shadelete",
+  "keywords": [
+    "gulp",
+    "boilerplate",
+    "frontend"
+  ],
+  "author": "shadelete <drgbkbeats@gmail.com>",
   "license": "ISC"
 }

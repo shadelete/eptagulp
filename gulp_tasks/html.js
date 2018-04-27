@@ -12,7 +12,7 @@ gulp.task('html', function () {
         prefix: '@@',
         basepath: '@file'
       }))
-    .pipe(gulp.dest(cnf.dist.html));
+    .pipe(gulp.dest(cnf.prod.html));
 });
  
 gulp.task('html:watch', function () {

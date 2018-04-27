@@ -3,7 +3,7 @@ var cnf = require('../package.json').config;
 
 gulp.task('fonts', function () {
   gulp.src(cnf.dev.fonts)  
-    .pipe(gulp.dest(cnf.dist.fonts));
+    .pipe(gulp.dest(cnf.prod.fonts));
 });
  
 gulp.task('fonts:watch', function () {

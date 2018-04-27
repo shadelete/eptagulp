@@ -26,7 +26,7 @@ gulp.task('sass', function () {
       extname: ".css"
     }))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(cnf.dist.css));
+    .pipe(gulp.dest(cnf.prod.css));
 });
  
 gulp.task('sass:watch', function () {

@@ -21,7 +21,7 @@ gulp.task('libs', function () {
       suffix: ".min",
       extname: ".css"
     }))
-    .pipe(gulp.dest(cnf.dist.css));
+    .pipe(gulp.dest(cnf.prod.css));
   gulp.src(cnf.libs.js) //js
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(babel())
@@ -30,7 +30,7 @@ gulp.task('libs', function () {
         hardFail: true
       }))
     .pipe(uglify())
-    .pipe(gulp.dest(cnf.dist.js))
+    .pipe(gulp.dest(cnf.prod.js))
 });
  
 gulp.task('libs:watch', function () {
