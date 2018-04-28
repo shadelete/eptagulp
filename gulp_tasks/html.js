@@ -1,9 +1,9 @@
-var gulp = require('gulp');
-var cnf = require('../package.json').config;
-var notify = require("gulp-notify");
-var plumber = require('gulp-plumber');
-var sourcemaps = require('gulp-sourcemaps');
-var fileinclude = require('gulp-file-include');
+const 	gulp 			= require('gulp'),
+ 		cnf 			= require('../package.json').config,
+ 		notify 			= require("gulp-notify"),
+ 		plumber 		= require('gulp-plumber'),
+ 		sourcemaps 		= require('gulp-sourcemaps'),
+		fileinclude 	= require('gulp-file-include');
 
 gulp.task('html', function () {
   return gulp.src(cnf.dev.html)

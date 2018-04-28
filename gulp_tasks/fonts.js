@@ -1,5 +1,5 @@
-var gulp = require('gulp');
-var cnf = require('../package.json').config;
+const 	gulp 	= require('gulp'),
+		cnf 	= require('../package.json').config;
 
 gulp.task('fonts', function () {
   gulp.src(cnf.dev.fonts)  

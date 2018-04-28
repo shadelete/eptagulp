@@ -1,13 +1,13 @@
-var gulp = require('gulp');
-var cnf = require('../package.json').config;
-var notify = require("gulp-notify");
-var plumber = require('gulp-plumber');
-var cssnano = require('gulp-cssnano');
-var rename = require("gulp-rename");
-var importCss = require('gulp-import-css');
-var babel = require('gulp-babel');
-var uglify = require('gulp-uglify');
-var include       = require("gulp-include");
+const gulp      = require('gulp'),
+      cnf       = require('../package.json').config,
+      notify    = require("gulp-notify"),
+      plumber   = require('gulp-plumber'),
+      cssnano   = require('gulp-cssnano'),
+      rename    = require("gulp-rename"),
+      importCss = require('gulp-import-css'),
+      babel     = require('gulp-babel'),
+      uglify    = require('gulp-uglify'),
+      include   = require("gulp-include");
 
 gulp.task('libs', function () {
   gulp.src(cnf.libs.css) //css

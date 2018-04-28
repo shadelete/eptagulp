@@ -1,9 +1,9 @@
-var gulp = require('gulp');
-var cnf = require('../package.json').config;
-var notify = require("gulp-notify");
-var plumber = require('gulp-plumber');
-var imagemin = require('gulp-imagemin');
-var runSequence = require('run-sequence');
+const   gulp        = require('gulp'),
+        cnf         = require('../package.json').config,
+        notify      = require("gulp-notify"),
+        plumber     = require('gulp-plumber'),
+        imagemin    = require('gulp-imagemin'),
+        runSequence = require('run-sequence');
 
 
 gulp.task('img', function () {

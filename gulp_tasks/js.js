@@ -1,12 +1,12 @@
-var gulp = require('gulp');
-var cnf = require('../package.json').config;
-var notify = require("gulp-notify");
-var plumber = require('gulp-plumber');
-var sourcemaps = require('gulp-sourcemaps');
-var babel = require('gulp-babel');
-var include       = require("gulp-include");
-var uglify = require('gulp-uglify');
-var rename = require("gulp-rename");
+const gulp        = require('gulp'),
+      cnf         = require('../package.json').config,
+      notify      = require("gulp-notify"),
+      plumber     = require('gulp-plumber'),
+      sourcemaps  = require('gulp-sourcemaps'),
+      babel       = require('gulp-babel'),
+      include     = require("gulp-include"),
+      uglify      = require('gulp-uglify'),
+      rename      = require("gulp-rename");
 
 gulp.task('js', function () {
   gulp.src(cnf.dev.js)
