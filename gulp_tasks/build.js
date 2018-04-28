@@ -1,6 +1,6 @@
-const 	gulp 			= require('gulp'),
-		runSequence 	= require('run-sequence'),
-		del 			= require('del');
+const 	gulp 			     = require('gulp'),
+		    runSequence 	 = require('run-sequence'),
+		    del 			     = require('del');
 
 
 gulp.task('clean', function() {
