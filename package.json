@@ -9,14 +9,12 @@
   "config": {
     "dev": {
       "sass": "dev/sass/main.sass",
-      "html": "dev",
       "js": "dev/js/common.js",
       "fonts": "dev/fonts/**/*.*",
       "img": "dev/img/**/*.*"
     },
     "prod": {
       "css": "prod/css",
-      "html": "prod/",
       "js": "prod/js/",
       "fonts": "prod/fonts",
       "img": "prod/img"

@@ -10,7 +10,7 @@ gulp.task('clean', function() {
 gulp.task('build',['clean'], function() {
   runSequence(
   	'sass',
-  	'html',
+  	'pug',
     'js',
   	'fonts',
   	'img',

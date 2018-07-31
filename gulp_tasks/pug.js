@@ -6,7 +6,7 @@ const 	gulp 			= require('gulp'),
 		fileinclude 	= require('gulp-file-include'),
 		pug 			= require('gulp-pug');
 
-gulp.task('html', function () {
+gulp.task('pug', function () {
   return gulp.src('dev/index.pug')
   	.pipe(pug({
     	pretty: true
@@ -20,6 +20,6 @@ gulp.task('html', function () {
     .pipe(gulp.dest('prod'));
 });
  
-gulp.task('html:watch', function () {
-  gulp.watch(['dev/**/*.pug'], ['html']);
+gulp.task('pug:watch', function () {
+  gulp.watch(['dev/**/*.pug'], ['pug']);
 });
