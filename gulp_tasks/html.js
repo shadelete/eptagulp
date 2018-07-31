@@ -3,18 +3,23 @@ const 	gulp 			= require('gulp'),
  		notify 			= require("gulp-notify"),
  		plumber 		= require('gulp-plumber'),
  		sourcemaps 		= require('gulp-sourcemaps'),
-		fileinclude 	= require('gulp-file-include');
+		fileinclude 	= require('gulp-file-include'),
+		pug 			= require('gulp-pug');
 
 gulp.task('html', function () {
-  return gulp.src(cnf.dev.html)
-    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-    .pipe(fileinclude({
-        prefix: '@@',
-        basepath: '@file'
-      }))
-    .pipe(gulp.dest(cnf.prod.html));
+  return gulp.src('dev/index.pug')
+  	.pipe(pug({
+    	pretty: true
+   		}))
+    //.pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+    //.pipe(fileinclude({
+    //    prefix: '@@',
+    //    basepath: '@file'
+    //  	}))
+
+    .pipe(gulp.dest('prod'));
 });
  
 gulp.task('html:watch', function () {
-  gulp.watch(['dev/**/*.html'], ['html']);
+  gulp.watch(['dev/**/*.pug'], ['html']);
 });
