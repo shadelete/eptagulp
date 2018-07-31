@@ -11,7 +11,7 @@ gulp.task('build',['clean'], function() {
   runSequence(
   	'sass',
   	'html',
-  	'js',
+    'js',
   	'fonts',
   	'img',
   	'libs'
